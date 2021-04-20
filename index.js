@@ -1,5 +1,5 @@
-const fs = require('./node_packages/fs');
-const inquirer = require('./node_packages/inquirer');
+const fs = require('fs');
+const inquirer = require('inquirer'); 
 
 const generateReadMe = (answers) =>` 
 # ${answers.project-title}
