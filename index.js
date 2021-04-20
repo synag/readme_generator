@@ -2,10 +2,10 @@ const fs = require('./node_packages/fs');
 const inquirer = require('./node_packages/inquirer');
 
 const generateReadMe = (answers) =>` 
-# <project name>
+# ${answers.project-title}
 
 ## Project Description 
-${name}
+${answers.project-description}
 
 ## Table of Content
 [installation](#installation)\
@@ -15,23 +15,25 @@ ${name}
 [question](#question)
 
 ## Installation Instructions
-
+${answers.installation-instruction}
 
 
 ## Usage information
+${answers.usage-information}
 
 ## License
+${answers.license}
 
 ## Contribution Guidelines
-
+${answers.contribution-guidelines}
 
 ## Test Instructions
-
+${answers.test-instructions}
 ## Questions
 
-Github username: \
-Github URL: \
-Email: `;
+Github username: ${answers.github-username}
+Github URL: ${answers.github-url}
+Email:  ${answers.email} `;
 
 
 
@@ -39,22 +41,22 @@ inquirer
   .prompt([
     {
       type: 'input',
-      name: 'project title',
+      name: 'project-title',
       message: 'Enter your project title',
     },
     {
       type: 'input',
-      name: 'project description',
+      name: 'project-description',
       message: 'Enter project description?',
     },
     {
       type: 'input',
-      name: 'instalation instructions',
+      name: 'instalation-instructions',
       message: 'Where are you from?',
     },
     {
       type: 'input',
-      name: 'usage information',
+      name: 'usage-information',
       message: 'What is usage information?',
     },
     {
@@ -64,22 +66,22 @@ inquirer
     },
     {
       type: 'input',
-      name: 'contribution guidelines',
+      name: 'contribution-guidelines',
       message: 'What is your contribution guidelines?',
     },
     {
       type: 'input',
-      name: 'test Instructions',
+      name: 'test-Instructions',
       message: 'Enter your Test Instruction.',
     },
     {
       type: 'input',
-      name: 'github username',
+      name: 'github-username',
       message: 'Enter your github username.',
     },
     {
       type: 'input',
-      name: 'github url',
+      name: 'github-url',
       message: 'Enter your Github URL.',
     },
     {
