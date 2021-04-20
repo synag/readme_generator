@@ -1,9 +1,11 @@
 const fs = require('./node_packages/fs');
 const inquirer = require('./node_packages/inquirer');
-const readMegiteOutput =` # <project name>
+
+const generateReadMe = (answers) =>` 
+# <project name>
 
 ## Project Description 
-
+${name}
 
 ## Table of Content
 [installation](#installation)\
@@ -29,7 +31,7 @@ const readMegiteOutput =` # <project name>
 
 Github username: \
 Github URL: \
-Email: `
+Email: `;
 
 
 
@@ -37,40 +39,60 @@ inquirer
   .prompt([
     {
       type: 'input',
-      name: 'name',
-      message: 'What is your name?',
+      name: 'project title',
+      message: 'Enter your project title',
     },
     {
       type: 'input',
-      name: 'location',
+      name: 'project description',
+      message: 'Enter project description?',
+    },
+    {
+      type: 'input',
+      name: 'instalation instructions',
       message: 'Where are you from?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'usage information',
+      message: 'What is usage information?',
+    },
+    {
+      type: 'input',//change to drop down
+      name: 'license',
+      message: 'What is your license?',
     },
     {
       type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'contribution guidelines',
+      message: 'What is your contribution guidelines?',
     },
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+      name: 'test Instructions',
+      message: 'Enter your Test Instruction.',
     },
     {
       type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'github username',
+      message: 'Enter your github username.',
+    },
+    {
+      type: 'input',
+      name: 'github url',
+      message: 'Enter your Github URL.',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Enter your email',
     },
   ])
   .then((answers) => {
-    const htmlPageContent = generateHTML(answers);
+    const readMePageContent = generateReadMe(answers);
 
-    fs.writeFile('index.html', htmlPageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!')
+    fs.writeFile('ReadMe.md', readMePageContent, (err) =>
+      err ? console.log(err) : console.log('Success')
     );
   });
 
