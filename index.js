@@ -1,6 +1,35 @@
 const fs = require('./node_packages/fs');
 const inquirer = require('./node_packages/inquirer');
-const readMegiteOutput =``
+const readMegiteOutput =` # <project name>
+
+## Project Description 
+
+
+## Table of Content
+[installation](#installation)\
+[usage](#usage)\
+[contribution](#contribution)\
+[test](#test)\
+[question](#question)
+
+## Installation Instructions
+
+
+
+## Usage information
+
+## License
+
+## Contribution Guidelines
+
+
+## Test Instructions
+
+## Questions
+
+Github username: \
+Github URL: \
+Email: `
 
 
 
