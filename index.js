@@ -52,13 +52,33 @@ inquirer
     {
       type: 'input',
       name: 'instalation-instructions',
-      message: 'Where are you from?',
+      message: 'What are the steps required to install your project? Provde step by step',
     },
     {
       type: 'input',
       name: 'usage-information',
-      message: 'What is usage information?',
+      message: 'Provide instructions and examples for use?',
     },
+    {
+    type: 'input',
+    name: 'usage-information-screenshot',
+    message: 'Provide screenshot filepath?',
+    },
+    {
+      type: 'input',
+      name: 'credit-contributor',
+      message: 'Provide screenshot filepath?',
+      },
+      {
+        type: 'input',
+        name: 'credit-tools',
+        message: 'What tools did you use on this project?',
+        },
+        {
+          type: 'input',
+          name: 'credit-tools-thirdparty',
+          message: 'What third-party resources did you use? Please provide name and URL',
+          },
     {
       type: 'input',//change to drop down
       name: 'license',
