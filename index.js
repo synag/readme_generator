@@ -1,12 +1,12 @@
 const fs = require('fs');
 const inquirer = require('inquirer'); 
-const generateMarkDown = require('generateMarkdow')
+const generateMarkDown = require('./utils/generateMarkdown')
 
 const generateReadMe = (answers) =>` 
-# ${answers.project-title}
+# ${answers.project_title}
 
 ## Project Description 
-${answers.project-description}
+${answers.project_description}
 
 ## Table of Content
 [installation](#installation)\
@@ -16,94 +16,94 @@ ${answers.project-description}
 [question](#question)
 
 ## Installation Instructions
-${answers.installation-instruction}
+${answers.installation_instruction}
 
 
 ## Usage information
-${answers.usage-information}
+${answers.usage_information}
 
 ## License
 ${answers.license}
 
 ## Contribution Guidelines
-${answers.contribution-guidelines}
+${answers.contribution_guidelines}
 
 ## Test Instructions
-${answers.test-instructions}
+${answers.test_instructions}
 ## Questions
 
-Github username: ${answers.github-username}
-Github URL: ${answers.github-url}
+Github username: ${answers.github_username}
+Github URL: ${answers.github_url}
 Email:  ${answers.email} `;
 
 
 
-inquirer
-  .prompt([
+
+const questions = ([
     {
       type: 'input',
-      name: 'project-title',
+      name: 'project_title',
       message: 'Enter your project title',
     },
     {
       type: 'input',
-      name: 'project-description',
+      name: 'project_description',
       message: 'Enter project description?',
     },
     {
       type: 'input',
-      name: 'instalation-instructions',
+      name: 'instalation_instructions',
       message: 'What are the steps required to install your project? Provde step by step',
     },
     {
       type: 'input',
-      name: 'usage-information',
+      name: 'usage_information',
       message: 'Provide instructions and examples for use?',
     },
     {
     type: 'input',
-    name: 'usage-information-screenshot',
+    name: 'usage_information-screenshot',
     message: 'Provide screenshot filepath?',
     },
     {
       type: 'input',
-      name: 'credit-contributor',
+      name: 'credit_contributor',
       message: 'Provide screenshot filepath?',
       },
       {
         type: 'input',
-        name: 'credit-tools',
+        name: 'credit_tools',
         message: 'What tools did you use on this project?',
         },
         {
           type: 'input',
-          name: 'credit-tools-thirdparty',
+          name: 'credit_tools_thirdparty',
           message: 'What third-party resources did you use? Please provide name and URL',
           },
     {
-      type: 'checkbox',//change to drop down
+      type: 'checkbox',
       name: 'license',
       message: 'What is your license?',
       choices: [,'BSD 2-Clause License','MIT','GPL' ]
     },
     {
       type: 'input',
-      name: 'contribution-guidelines',
+      name: 'contribution_guidelines',
       message: 'What is your contribution guidelines?',
     },
     {
       type: 'input',
-      name: 'test-Instructions',
+      name: 'test_Instructions',
       message: 'Enter your Test Instruction.',
     },
     {
       type: 'input',
-      name: 'github-username',
+      name: 'github_username',
       message: 'Enter your github username.',
     },
     {
       type: 'input',
-      name: 'github-url',
+      name: 'github_url',
       message: 'Enter your Github URL.',
     },
     {
@@ -111,8 +111,8 @@ inquirer
       name: 'email',
       message: 'Enter your email',
     },
-  ])
-  .then((answers) => {
+  ]);
+  inquirer.prompt(questions).then((answers) => {
     const readMePageContent = generateReadMe(answers);
 
     fs.writeFile('ReadMe.md', readMePageContent, (err) =>
