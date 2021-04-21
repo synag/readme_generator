@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer'); 
+const generateMarkDown = require('generateMarkdow')
 
 const generateReadMe = (answers) =>` 
 # ${answers.project-title}
@@ -80,9 +81,10 @@ inquirer
           message: 'What third-party resources did you use? Please provide name and URL',
           },
     {
-      type: 'input',//change to drop down
+      type: 'checkbox',//change to drop down
       name: 'license',
       message: 'What is your license?',
+      choices: [,'BSD 2-Clause License','MIT','GPL' ]
     },
     {
       type: 'input',
