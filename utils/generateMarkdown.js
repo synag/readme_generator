@@ -12,16 +12,16 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "BSD 2-Clause License"){
-    const licenseLink = "[![License:GPLv3](https//:img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    const licenseLink = "https//:img.shields.io/badge/License-GPLv3-blue.svg"
     return licenseLink
   } 
 
   else if(license == "MIT"){
-      const licenseLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+      const licenseLink = "https://img.shields.io/badge/License-MIT-yellow.svg"
       return licenseLink
   } 
       else if(license == "GPL"){
-          const licenseLink = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+          const licenseLink = "https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0"
           return licenseLink
       }
 
