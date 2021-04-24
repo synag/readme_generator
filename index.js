@@ -1,41 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkDown = require("./utils/generateMarkdown");
-
-const generateReadMe = (answers) => ` 
-# ${answers.project_title}  <img style="float: right;" src="${gda}
+const generateMarkdown = require("./utils/generateMarkdown")
 
 
-## Project Description 
-${answers.project_description}
 
-## Table of Content
-[installation](#installation)n/
-[usage](#usage)n/
-[contribution](#contribution)n/
-[test](#test)n/
-[question](#question)
-
-## Installation Instructions
-${answers.installation_instruction}
-
-
-## Usage information
-${answers.usage_information}
-
-## License
-${answers.license}
-
-## Contribution Guidelines
-${answers.contribution_guidelines}
-
-## Test Instructions
-${answers.test_instructions}
-## Questions
-
-Github username: ${answers.github_username}
-Github URL: ${answers.github_url}
-Email:  ${answers.email} `;
 
 const questions = [
   {
@@ -81,10 +49,10 @@ const questions = [
       "What third-party resources did you use? Please provide name and URL",
   },
   {
-    type: "checkbox",
+    type: "choices",
     name: "license",
     message: "What is your license?",
-    choices: [, "BSD 2-Clause License", "MIT", "GPL"],
+    // choices: [, "BSD 2-Clause License", "MIT", "GPL"],
   },
   {
     type: "input",
@@ -113,9 +81,25 @@ const questions = [
   },
 ];
 inquirer.prompt(questions).then((answers) => {
-  const readMePageContent = generateReadMe(answers);
-  
+  const readMePageContent = generateMarkdown(answers);
+  const license = answers.license
+
+  console.log(license);
+ 
+
+
+
+  // generateMarkDown.renderLicenseBadge(answer.license);
+//  const licenseLink = generateMarkDown.renderLicenseLink(answers.license);
+//   const licenseSection = generateMarkDown.renderLicenseSection(answers.license);
+
   fs.writeFile("ReadMe.md", readMePageContent, (err) =>
     err ? console.log(err) : console.log("Success")
   );
 });
+
+// add this initialize
+function init() {}
+
+// Function call to initialize app
+init();
