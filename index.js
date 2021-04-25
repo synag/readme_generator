@@ -56,10 +56,10 @@ const questions = [
       "What third-party resources did you use? ",
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "license",
     message: "What is your license?",
-    choices: [, "BSD 2-Clause License", "MIT", "GPL"],
+    choices: [ "BSD 2-Clause License", "MIT", "GPL"],
   },
   {
     type: "input",

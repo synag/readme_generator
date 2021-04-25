@@ -1,11 +1,11 @@
  
 # README Generator   
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
 
 ## Project Description 
-The professional Readme generator is a quick and easy way to create a professional, polished readme file from the command line. The README Generator is an excellent tool for open source projects on GitHub as it is essential to have a high-quality README for an app. The README  Generator has prompt questions that allow the user to explain what the app is for, and how to use it. 
+The professional Readme generator is a quick and easy way to create a professional, polished readme file from the command line. The README Generator is an excellent tool for open source projects on GitHub as it is essential to have a high-quality README for an app. The README  Generator has prompt questions that allow the user to explain what the app is for, and how to use it.
 
 ## Table of Content
 
@@ -40,13 +40,18 @@ The sreenshot for the README Generator  is below.
 ![README Generator ](./images/screenshot.png)
 
 ## License
-The license used for this project is MIT. Here is the license link https://opensource.org/licenses/MIT
+The license used for this project is BSD 2-Clause License. Here is the license link https://opensource.org/licenses/BSD-2-Clause
+
+## Credits
+No team members worked on this project and the tools used were HTML, Markdown, Node inquirer, JavaScript.
+
+Third-party resources used were node inquirer, and markdown resources websites.
 
 ## Contribution
 Review the contribution playbook and adhere to our contribution standards.
 
 ## Test
-No test instructions.
+No test instructions
 
 ## Questions
 Please contact me with any questions.  

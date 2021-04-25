@@ -84,6 +84,11 @@ The sreenshot for the ${answers.project_title} is below.
 ## License
 The license used for this project is ${renderLicenseSection(answers.license)}. Here is the license link ${renderLicenseLink(answers.license)}
 
+## Credits
+${answers.credit_tools}
+
+${answers.credit_tools_thirdparty}
+
 ## Contribution
 ${answers.contribution_guidelines}
 
