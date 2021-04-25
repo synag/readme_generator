@@ -18,23 +18,30 @@ const questions = [
   },
   {
     type: "input",
-    name: "instalation_instructions",
+    name: "installation_instructions1",
     message:
-      "What are the steps required to install your project? Provde step by step",
+      "What are the steps required to install your project?",
+  },
+  {
+    type: "input",
+    name: "installation_instructions2",
+    message:
+      "Please provide the website url",
+  },
+  {
+    type: "input",
+    name: "installation_instructions3",
+    message:
+      "Please provide your gitub repo url",
   },
   {
     type: "input",
     name: "usage_information",
-    message: "Provide instructions and examples for use?",
+    message: "Provide usage instructions",
   },
   {
     type: "input",
-    name: "usage_information-screenshot",
-    message: "Provide screenshot filepath?",
-  },
-  {
-    type: "input",
-    name: "credit_contributor",
+    name: "usage_information_screenshot",
     message: "Provide screenshot filepath?",
   },
   {
@@ -46,13 +53,13 @@ const questions = [
     type: "input",
     name: "credit_tools_thirdparty",
     message:
-      "What third-party resources did you use? Please provide name and URL",
+      "What third-party resources did you use? ",
   },
   {
-    type: "choices",
+    type: "checkbox",
     name: "license",
     message: "What is your license?",
-    // choices: [, "BSD 2-Clause License", "MIT", "GPL"],
+    choices: [, "BSD 2-Clause License", "MIT", "GPL"],
   },
   {
     type: "input",
@@ -61,7 +68,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "test_Instructions",
+    name: "test_instructions",
     message: "Enter your Test Instruction.",
   },
   {
