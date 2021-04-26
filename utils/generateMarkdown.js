@@ -59,6 +59,8 @@ ${answers.project_description}
 
 * [Contribution](#Contribution)
 
+* [Credit](#Credits)
+
 * [Test](#Test)
 
 * [Question](#Question) 

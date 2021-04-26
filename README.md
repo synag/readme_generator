@@ -15,6 +15,8 @@ The professional Readme generator is a quick and easy way to create a profession
 
 * [License](#License)
 
+* [Credits](#Credits)
+
 * [Contribution](#Contribution)
 
 * [Test](#Test)
